@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-22T10:25:31+08:00</updated>
+  <updated>2013-07-22T10:57:19+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -51,7 +51,11 @@ platform :ios, '5.1'
 Pod 'FMDB','2.0'
 </code></p>
 
-<p>然后执行pod install</p>
+<p>然后执行下面的命令，将这些类库加到到本地</p>
+
+<p><code>ruby
+pod install
+</code></p>
 
 <p>之后将会生成一个workspace文件，以后我们打开项目的时候，就打开workspace文件即可，项目和其所需要的类库都以sub project的方式加到了这个workspace下面</p>
 ]]></content>
