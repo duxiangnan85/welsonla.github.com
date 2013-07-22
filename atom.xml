@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-22T10:57:17+08:00</updated>
+  <updated>2013-07-22T13:34:11+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -108,6 +108,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<h4>切换到分支</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 <h4>迁移原有git项目到新得项目地址</h4>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -122,6 +129,11 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
+<h4>查看git log</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="n">log</span>
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
