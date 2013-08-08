@@ -5,21 +5,26 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>vim-note - Welsonla on the way</title>
+  <title>generate new host RSA key - Welsonla on the way</title>
   <meta name="author" content="Welsonla">
 
   
-  <meta name="description" content="移动到行首 1
-0 移动到行尾 1
-$ 剪切多行 1
+  <meta name="description" content="最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示 1
 2
 3
-v
-向下移动
-d 粘贴 1
-P 在nerdTree光标处新建一个文件 1
-m 删除多行(数字+dd) 1
-5dd #删除5行 ">
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ WARNING &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -28,7 +33,7 @@ m 删除多行(数字+dd) 1
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://welsonla.github.io/blog/2013/07/06/vim-note">
+  <link rel="canonical" href="http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Welsonla on the way" type="application/atom+xml">
@@ -91,7 +96,7 @@ m 删除多行(数字+dd) 1
   
   <header>
     
-      <h1 class="entry-title">Vim-note</h1>
+      <h1 class="entry-title">Generate New Host RSA Key</h1>
     
     
       <p class="meta">
@@ -107,7 +112,7 @@ m 删除多行(数字+dd) 1
   
 
 
-<time datetime="2013-07-06T17:27:00+08:00" pubdate data-updated="true">Jul 6<span>th</span>, 2013</time>
+<time datetime="2013-08-06T23:34:00+08:00" pubdate data-updated="true">Aug 6<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -116,53 +121,56 @@ m 删除多行(数字+dd) 1
   </header>
 
 
-<div class="entry-content"><h4>移动到行首</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">0</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>移动到行尾</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">$</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h4>剪切多行</h4>
+<div class="entry-content"><p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">v</span>
-</span><span class='line'><span class="err">向下移动</span>
-</span><span class='line'><span class="n">d</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>       <span class="ss">WARNING</span><span class="p">:</span> <span class="no">POSSIBLE</span> <span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="no">DETECTED</span><span class="o">!</span>          <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">The</span> <span class="no">RSA</span> <span class="n">host</span> <span class="n">key</span> <span class="k">for</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span> <span class="n">has</span> <span class="n">changed</span><span class="p">,</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">the</span> <span class="n">key</span> <span class="k">for</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="no">IP</span> <span class="n">address</span> <span class="mi">112</span><span class="o">.</span><span class="mi">124</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">106</span>
+</span><span class='line'><span class="n">is</span> <span class="n">unknown</span><span class="o">.</span> <span class="no">This</span> <span class="n">could</span> <span class="n">either</span> <span class="n">mean</span> <span class="n">that</span>
+</span><span class='line'><span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="n">is</span> <span class="n">happening</span> <span class="ow">or</span> <span class="n">the</span> <span class="no">IP</span> <span class="n">address</span> <span class="k">for</span> <span class="n">the</span> <span class="n">host</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">its</span> <span class="n">host</span> <span class="n">key</span> <span class="n">have</span> <span class="n">changed</span> <span class="n">at</span> <span class="n">the</span> <span class="n">same</span> <span class="n">time</span><span class="o">.</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>    <span class="ss">WARNING</span><span class="p">:</span> <span class="no">REMOTE</span> <span class="no">HOST</span> <span class="no">IDENTIFICATION</span> <span class="no">HAS</span> <span class="no">CHANGED</span><span class="o">!</span>     <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">IT</span> <span class="no">IS</span> <span class="no">POSSIBLE</span> <span class="no">THAT</span> <span class="no">SOMEONE</span> <span class="no">IS</span> <span class="no">DOING</span> <span class="no">SOMETHING</span> <span class="no">NASTY</span><span class="o">!</span>
+</span><span class='line'><span class="no">Someone</span> <span class="n">could</span> <span class="n">be</span> <span class="n">eavesdropping</span> <span class="n">on</span> <span class="n">you</span> <span class="n">right</span> <span class="n">now</span> <span class="p">(</span><span class="n">man</span><span class="o">-</span><span class="k">in</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="n">middle</span> <span class="n">attack</span><span class="p">)</span><span class="o">!</span>
+</span><span class='line'><span class="no">It</span> <span class="n">is</span> <span class="n">also</span> <span class="n">possible</span> <span class="n">that</span> <span class="n">a</span> <span class="n">host</span> <span class="n">key</span> <span class="n">has</span> <span class="n">just</span> <span class="n">been</span> <span class="n">changed</span><span class="o">.</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h4>粘贴</h4>
+<p><del>第一个问题非常简单，就是修改/etc/hosts，添加一个IP与域名的对应关系即可</del></p>
+
+<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">P</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">R</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h4>在nerdTree光标处新建一个文件</h4>
+
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">m</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cat</span> <span class="sr">/.ssh/</span><span class="n">known_hosts</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h4>删除多行(数字+dd)</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="mi">5</span><span class="n">dd</span> <span class="c1">#删除5行</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+<p>查看known_host中的数据可以看到key已经更新了</p>
 </div>
 
 
@@ -185,12 +193,12 @@ m 删除多行(数字+dd) 1
   
 
 
-<time datetime="2013-07-06T17:27:00+08:00" pubdate data-updated="true">Jul 6<span>th</span>, 2013</time>
+<time datetime="2013-08-06T23:34:00+08:00" pubdate data-updated="true">Aug 6<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/gong-ju-kong/'>工具控</a>
+    <a class='category' href='/blog/categories/git/'>git</a>
   
 </span>
 
@@ -199,7 +207,7 @@ m 删除多行(数字+dd) 1
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/07/06/vim-note/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/07/06/vim-note/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key/" data-via="welsonla" data-counturl="http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -210,10 +218,8 @@ m 删除多行(数字+dd) 1
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/06/25/git-note/" title="Previous Post: git笔记">&laquo; git笔记</a>
+        <a class="basic-alignment left" href="/blog/2013/07/06/vim-note/" title="Previous Post: vim-note">&laquo; vim-note</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/08/06/generate-new-host-rsa-key/" title="Next Post: generate new host RSA key">generate new host RSA key &raquo;</a>
       
     </p>
   </footer>
@@ -319,8 +325,8 @@ m 删除多行(数字+dd) 1
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://welsonla.github.io/blog/2013/07/06/vim-note/';
-        var disqus_url = 'http://welsonla.github.io/blog/2013/07/06/vim-note/';
+        var disqus_identifier = 'http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key/';
+        var disqus_url = 'http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key/';
         var disqus_script = 'embed.js';
       
     (function () {

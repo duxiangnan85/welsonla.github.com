@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 工具控 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/gong-ju-kong/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-22T13:34:11+08:00</updated>
+  <updated>2013-08-08T10:00:57+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vim-note]]></title>
+    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
+    <updated>2013-07-06T17:27:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
+    <content type="html"><![CDATA[<h4>移动到行首</h4>
+
+<p><code>ruby
+0
+</code></p>
+
+<h4>移动到行尾</h4>
+
+<p><code>ruby
+$
+</code></p>
+
+<h4>剪切多行</h4>
+
+<p><code>ruby
+v
+向下移动
+d
+</code></p>
+
+<h4>粘贴</h4>
+
+<p><code>ruby
+P
+</code></p>
+
+<h4>在nerdTree光标处新建一个文件</h4>
+
+<p><code>ruby
+m
+</code></p>
+
+<h4>删除多行(数字+dd)</h4>
+
+<p><code>ruby
+5dd #删除5行
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[一个码农的Mac配置]]></title>

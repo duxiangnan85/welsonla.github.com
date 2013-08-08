@@ -4,7 +4,7 @@
   <title><![CDATA[Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-22T13:34:11+08:00</updated>
+  <updated>2013-08-08T10:00:55+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[generate new host RSA key]]></title>
+    <link href="http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key/"/>
+    <updated>2013-08-06T23:34:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/08/06/generate-new-host-rsa-key</id>
+    <content type="html"><![CDATA[<p>最近oschina的git服务器进行了迁移，导致了原有的git项目push不上去，总是提示</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>       <span class="ss">WARNING</span><span class="p">:</span> <span class="no">POSSIBLE</span> <span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="no">DETECTED</span><span class="o">!</span>          <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">The</span> <span class="no">RSA</span> <span class="n">host</span> <span class="n">key</span> <span class="k">for</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span> <span class="n">has</span> <span class="n">changed</span><span class="p">,</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">the</span> <span class="n">key</span> <span class="k">for</span> <span class="n">the</span> <span class="n">corresponding</span> <span class="no">IP</span> <span class="n">address</span> <span class="mi">112</span><span class="o">.</span><span class="mi">124</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">106</span>
+</span><span class='line'><span class="n">is</span> <span class="n">unknown</span><span class="o">.</span> <span class="no">This</span> <span class="n">could</span> <span class="n">either</span> <span class="n">mean</span> <span class="n">that</span>
+</span><span class='line'><span class="no">DNS</span> <span class="no">SPOOFING</span> <span class="n">is</span> <span class="n">happening</span> <span class="ow">or</span> <span class="n">the</span> <span class="no">IP</span> <span class="n">address</span> <span class="k">for</span> <span class="n">the</span> <span class="n">host</span>
+</span><span class='line'><span class="ow">and</span> <span class="n">its</span> <span class="n">host</span> <span class="n">key</span> <span class="n">have</span> <span class="n">changed</span> <span class="n">at</span> <span class="n">the</span> <span class="n">same</span> <span class="n">time</span><span class="o">.</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="err">@</span>    <span class="ss">WARNING</span><span class="p">:</span> <span class="no">REMOTE</span> <span class="no">HOST</span> <span class="no">IDENTIFICATION</span> <span class="no">HAS</span> <span class="no">CHANGED</span><span class="o">!</span>     <span class="err">@</span>
+</span><span class='line'><span class="err">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</span>
+</span><span class='line'><span class="no">IT</span> <span class="no">IS</span> <span class="no">POSSIBLE</span> <span class="no">THAT</span> <span class="no">SOMEONE</span> <span class="no">IS</span> <span class="no">DOING</span> <span class="no">SOMETHING</span> <span class="no">NASTY</span><span class="o">!</span>
+</span><span class='line'><span class="no">Someone</span> <span class="n">could</span> <span class="n">be</span> <span class="n">eavesdropping</span> <span class="n">on</span> <span class="n">you</span> <span class="n">right</span> <span class="n">now</span> <span class="p">(</span><span class="n">man</span><span class="o">-</span><span class="k">in</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="n">middle</span> <span class="n">attack</span><span class="p">)</span><span class="o">!</span>
+</span><span class='line'><span class="no">It</span> <span class="n">is</span> <span class="n">also</span> <span class="n">possible</span> <span class="n">that</span> <span class="n">a</span> <span class="n">host</span> <span class="n">key</span> <span class="n">has</span> <span class="n">just</span> <span class="n">been</span> <span class="n">changed</span><span class="o">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><del>第一个问题非常简单，就是修改/etc/hosts，添加一个IP与域名的对应关系即可</del></p>
+
+<p>第二个是要求你更新know_host中的RSA key，执行如下命令即可</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">R</span> <span class="n">git</span><span class="o">.</span><span class="n">oschina</span><span class="o">.</span><span class="n">net</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">cat</span> <span class="sr">/.ssh/</span><span class="n">known_hosts</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>查看known_host中的数据可以看到key已经更新了</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[vim-note]]></title>

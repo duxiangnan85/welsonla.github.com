@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 技术随笔 | Welsonla on the way]]></title>
   <link href="http://welsonla.github.io/blog/categories/ji-zhu-sui-bi/atom.xml" rel="self"/>
   <link href="http://welsonla.github.io/"/>
-  <updated>2013-07-22T13:34:11+08:00</updated>
+  <updated>2013-08-08T10:00:57+08:00</updated>
   <id>http://welsonla.github.io/</id>
   <author>
     <name><![CDATA[Welsonla]]></name>
@@ -12,112 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[vim-note]]></title>
-    <link href="http://welsonla.github.io/blog/2013/07/06/vim-note/"/>
-    <updated>2013-07-06T17:27:00+08:00</updated>
-    <id>http://welsonla.github.io/blog/2013/07/06/vim-note</id>
-    <content type="html"><![CDATA[<h4>移动到行首</h4>
-
-<p><code>ruby
-0
-</code></p>
-
-<h4>移动到行尾</h4>
-
-<p><code>ruby
-$
-</code></p>
-
-<h4>剪切多行</h4>
-
-<p><code>ruby
-v
-向下移动
-d
-</code></p>
-
-<h4>粘贴</h4>
-
-<p><code>ruby
-P
-</code></p>
-
-<h4>在nerdTree光标处新建一个文件</h4>
-
-<p><code>ruby
-m
-</code></p>
-
-<h4>删除多行(数字+dd)</h4>
-
-<p><code>ruby
-5dd #删除5行
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[git笔记]]></title>
-    <link href="http://welsonla.github.io/blog/2013/06/25/git-note/"/>
-    <updated>2013-06-25T09:21:00+08:00</updated>
-    <id>http://welsonla.github.io/blog/2013/06/25/git-note</id>
-    <content type="html"><![CDATA[<h4>添加所有新文件</h4>
-
-<p><code>ruby
-git add .
-</code></p>
-
-<h4>从版本中去除一个文件</h4>
-
-<p><code>ruby
-git rm test.html.rb
-</code></p>
-
-<h4>假设有很多新文件和删除了好多文件</h4>
-
-<p><code>ruby
-git add -A
-</code></p>
-
-<h4>获取所有远程版本</h4>
-
-<p><code>ruby
-git fetch
-</code></p>
-
-<h4>创建并切换到新分支</h4>
-
-<p><code>ruby
-git checkout -b newbranch
-</code></p>
-
-<h4>切换到分支</h4>
-
-<p><code>ruby
-git checkout master
-</code></p>
-
-<h4>迁移原有git项目到新得项目地址</h4>
-
-<p><code>ruby
-git remote set-url origin git@git.github.com:welsonla/studio.git
-</code></p>
-
-<h4>查看当前git分支</h4>
-
-<p><code>
-git branch -r
-</code></p>
-
-<h4>查看git log</h4>
-
-<p><code>ruby
-git log
-</code></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[blog with github(4)-开始写吧，骚年]]></title>
@@ -347,6 +241,97 @@ echo 'your-domain.com' &gt;&gt; source/CNAME
 <code>ruby
 207.97.227.245
 </code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[blog with github(1)-前期准备]]></title>
+    <link href="http://welsonla.github.io/blog/2013/05/10/blog-with-github/"/>
+    <updated>2013-05-10T01:18:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/05/10/blog-with-github</id>
+    <content type="html"><![CDATA[<h2>开始之前</h2>
+
+<ol>
+<li><a href="http://git-scm.com/">安装Git</a></li>
+<li>使用<a href="http://octopress.org/docs/setup/rbenv">rbenv</a>或者<a href="http://octopress.org/docs/setup/rvm">RVM</a>安装ruby 1.9.3</li>
+</ol>
+
+
+<p>安装完后确保你的ruby版本是1.9.3
+<code>ruby
+ruby -v
+</code></p>
+
+<h2>设置Octopress</h2>
+
+<p><code>ruby
+git clone git://github.com/imathis/octopress.git octopress
+cd octopress  
+</code></p>
+
+<p>接下来安装一些依赖</p>
+
+<p><code>ruby
+gem install bundler
+rbenv rehash   
+bundle install
+</code></p>
+
+<p>安装Octopress默认主题</p>
+
+<p><code>ruby
+rake install
+</code></p>
+
+<p>--未完待续，哥去睡觉</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[different of class and category]]></title>
+    <link href="http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category/"/>
+    <updated>2013-05-10T01:05:00+08:00</updated>
+    <id>http://welsonla.github.io/blog/2013/05/10/different-of-class-and-category</id>
+    <content type="html"><![CDATA[<p>当需要重写父类中的方法时，这时候定义子类</p>
+
+<p>```ruby
+@interface JADanSideController : JASidePanelController</p>
+
+<p>@end</p>
+
+<p>@implementation JADanSideController</p>
+
+<ul>
+<li><p>(UIBarButtonItem *)leftButtonForCenterPanel{</p>
+
+<p>  UIButton <em>leftBarButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  [leftBarButton setFrame:CGRectMake(0, 0, 44, 30)];
+  [leftBarButton setBackgroundImage:[UIImage imageNamed:@"List_NaviSide.png"] forState:UIControlStateNormal];
+  [leftBarButton addTarget:self action:@selector(toggleLeftPanel:) forControlEvents:UIControlEventTouchUpInside];
+  __autoreleasing UIBarButtonItem </em>leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBarButton];</p>
+
+<p>  return leftBarButtonItem;
+}</p></li>
+</ul>
+
+
+<p>@end</p>
+
+<p>```</p>
+
+<p>当需要为父类添加方法时，这时候定义类别</p>
+
+<p>```ruby
+@interface JADanSideController : JASidePanelController</p>
+
+<ul>
+<li>(void)setBackGroundColor;</li>
+</ul>
+
+
+<p>@end</p>
+
+<p>```</p>
 ]]></content>
   </entry>
   
