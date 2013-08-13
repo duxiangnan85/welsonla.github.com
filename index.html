@@ -119,35 +119,38 @@ cd &hellip;">
 	<div class="entry-content" itemprop="articleBody">
 		<h2>Get the sqlcipher SourceCode</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/sqlcipher/sqlcipher.git
-</span><span class='line'>cd sqlcipher</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">git</span> <span class="nb">clone</span> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sqlcipher</span><span class="o">/</span><span class="n">sqlcipher</span><span class="o">.</span><span class="n">git</span>
+</span><span class='line'><span class="n">cd</span> <span class="n">sqlcipher</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Complite the source code</h2>
 
 <p>动态链接的编译方法（Compiling with dynamic linking）[推荐]:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="-lcrypto"
-</span><span class='line'> make
-</span><span class='line'> ln -s /Users/wanyc/sqlcipher/sqlite3 /usr/bin/sqlcipher </span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">.</span><span class="n">/configure</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">tempstore</span><span class="o">=</span><span class="n">yes</span> <span class="no">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-DSQLITE_HAS_CODEC&quot;</span> <span class="no">LDFLAGS</span><span class="o">=</span><span class="s2">&quot;-lcrypto&quot;</span>
+</span><span class='line'> <span class="n">make</span>
+</span><span class='line'> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="sr">/Users/</span><span class="n">wanyc</span><span class="o">/</span><span class="n">sqlcipher</span><span class="o">/</span><span class="n">sqlite3</span> <span class="sr">/usr/</span><span class="n">bin</span><span class="o">/</span><span class="n">sqlcipher</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>静态库的编译方法: (replace /path/to with the path to libcrypto.a)</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>  ./configure --enable-tempstore=yes CFLAGS="-DSQLITE_HAS_CODEC" LDFLAGS="/path/to/libcrypto.a"
-</span><span class='line'>  make</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">.</span><span class="n">/configure</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">tempstore</span><span class="o">=</span><span class="n">yes</span> <span class="no">CFLAGS</span><span class="o">=</span><span class="s2">&quot;-DSQLITE_HAS_CODEC&quot;</span> <span class="no">LDFLAGS</span><span class="o">=</span><span class="s2">&quot;/path/to/libcrypto.a&quot;</span>
+</span><span class='line'>  <span class="n">make</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>How to encrypt a sqlite(In Shell)</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -155,51 +158,55 @@ cd &hellip;">
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sqlcipher test.db
-</span><span class='line'>&gt; PRAGMA key='test'; //必须在打开数据库第一步来执行
-</span><span class='line'>&gt; select * from sqlite_master;
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sqlcipher</span> <span class="nb">test</span><span class="o">.</span><span class="n">db</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="no">PRAGMA</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">;</span> <span class="sr">//</span><span class="err">必须在打开数据库第一步来执行</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nb">select</span> <span class="o">*</span> <span class="n">from</span> <span class="n">sqlite_master</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>//创建一个新数据库
-</span><span class='line'>sqlcipher encrypted.db 
-</span><span class='line'>&gt;PRAGMA key = '[YourPasswordHere]';
-</span><span class='line'>&gt;SELECT * FROM SomeTableName;</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="sr">//</span><span class="err">创建一个新数据库</span>
+</span><span class='line'><span class="n">sqlcipher</span> <span class="n">encrypted</span><span class="o">.</span><span class="n">db</span>
+</span><span class='line'><span class="o">&gt;</span><span class="no">PRAGMA</span> <span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;[YourPasswordHere]&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="o">&gt;</span><span class="no">SELECT</span> <span class="o">*</span> <span class="no">FROM</span> <span class="no">SomeTableName</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>为现有数据加密</h2>
 
 <h4>1.先导出现有库的数据(In shell)</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sqlcipher plaintext.db
-</span><span class='line'>.output dsa.sql
-</span><span class='line'>.dump</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sqlcipher</span> <span class="n">plaintext</span><span class="o">.</span><span class="n">db</span>
+</span><span class='line'><span class="o">.</span><span class="n">output</span> <span class="n">dsa</span><span class="o">.</span><span class="n">sql</span>
+</span><span class='line'><span class="o">.</span><span class="n">dump</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h4>将新的数据库导出，并加密，之后导入非加密的库里面的数据</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sqlcipher another.db
-</span><span class='line'>PRAGMA key='aaa';
-</span><span class='line'>.read dsa.sql</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">sqlcipher</span> <span class="n">another</span><span class="o">.</span><span class="n">db</span>
+</span><span class='line'><span class="no">PRAGMA</span> <span class="n">key</span><span class="o">=</span><span class="s1">&#39;aaa&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="o">.</span><span class="n">read</span> <span class="n">dsa</span><span class="o">.</span><span class="n">sql</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h4>2.官方做法（推荐,In shell）</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ATTACH DATABASE 'encrypted.db' as encrypted KEY 'SomePassword'; //encrypted.db是要导出的新的数据库
-</span><span class='line'>SELECT sqlcipher_export('encrypted');
-</span><span class='line'>DETACH DATABASE encrypted;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ATTACH</span> <span class="no">DATABASE</span> <span class="s1">&#39;encrypted.db&#39;</span> <span class="n">as</span> <span class="n">encrypted</span> <span class="no">KEY</span> <span class="s1">&#39;SomePassword&#39;</span><span class="p">;</span> <span class="sr">//en</span><span class="n">crypted</span><span class="o">.</span><span class="n">db</span><span class="err">是要导出的新的数据库</span>
+</span><span class='line'><span class="no">SELECT</span> <span class="n">sqlcipher_export</span><span class="p">(</span><span class="s1">&#39;encrypted&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="no">DETACH</span> <span class="no">DATABASE</span> <span class="n">encrypted</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h5>3.Object-c代码实现对一个非加密库导入到加密库的方法(已经验证)(Xcode)</h5>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -222,39 +229,41 @@ cd &hellip;">
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) 
-</span><span class='line'>                      objectAtIndex:0];
-</span><span class='line'>NSString *attachPath = [documentPath stringByAppendingPathComponent:@"new.db"];
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">documentPath</span> <span class="o">=</span> <span class="o">[</span><span class="no">NSSearchPathForDirectoriesInDomains</span><span class="p">(</span><span class="no">NSDocumentDirectory</span><span class="p">,</span><span class="no">NSUserDomainMask</span><span class="p">,</span> <span class="no">YES</span><span class="p">)</span>
+</span><span class='line'>                      <span class="ss">objectAtIndex</span><span class="p">:</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">attachPath</span> <span class="o">=</span> <span class="o">[</span><span class="n">documentPath</span> <span class="ss">stringByAppendingPathComponent</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;new.db&quot;</span><span class="o">]</span><span class="p">;</span>
 </span><span class='line'>
-</span><span class='line'>if (sqlite3_open([path_u UTF8String], &convert_DB) == SQLITE_OK) {
-</span><span class='line'>NSString *sql = [NSString stringWithFormat:@"ATTACH DATABASE '%@' AS encrypted KEY '1234';",
-</span><span class='line'>              attachPath];
-</span><span class='line'>//执行Attach操作
-</span><span class='line'>  sqlite3_exec(convert_DB, [sql UTF8String] , NULL, NULL, NULL);
-</span><span class='line'>  
-</span><span class='line'>  // 导出数据库
-</span><span class='line'>  sqlite3_exec(convert_DB, "SELECT sqlcipher_export('encrypted');", NULL, NULL, NULL);
-</span><span class='line'>  
-</span><span class='line'>  // 执行分离
-</span><span class='line'>  sqlite3_exec(convert_DB, "DETACH DATABASE encrypted;", NULL, NULL, NULL);
-</span><span class='line'>  
-</span><span class='line'>  NSLog (@"End database copying at %@",[NSDate date]);
-</span><span class='line'>  sqlite3_close(convert_DB);
-</span><span class='line'>}
-</span><span class='line'>else {
-</span><span class='line'>    sqlite3_close(convert_DB);
-</span><span class='line'>    NSAssert1(NO, @"Failed to open database with message '%s'.", sqlite3_errmsg(convert_DB));
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">sqlite3_open</span><span class="p">(</span><span class="o">[</span><span class="n">path_u</span> <span class="no">UTF8String</span><span class="o">]</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">convert_DB</span><span class="p">)</span> <span class="o">==</span> <span class="no">SQLITE_OK</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'><span class="no">NSString</span> <span class="o">*</span><span class="n">sql</span> <span class="o">=</span> <span class="o">[</span><span class="no">NSString</span> <span class="ss">stringWithFormat</span><span class="p">:</span><span class="err">@</span><span class="s2">&quot;ATTACH DATABASE &#39;%@&#39; AS encrypted KEY &#39;1234&#39;;&quot;</span><span class="p">,</span>
+</span><span class='line'>              <span class="n">attachPath</span><span class="o">]</span><span class="p">;</span>
+</span><span class='line'><span class="sr">//</span><span class="err">执行</span><span class="no">Attach</span><span class="err">操作</span>
+</span><span class='line'>  <span class="n">sqlite3_exec</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">,</span> <span class="o">[</span><span class="n">sql</span> <span class="no">UTF8String</span><span class="o">]</span> <span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="sr">//</span> <span class="err">导出数据库</span>
+</span><span class='line'>  <span class="n">sqlite3_exec</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">,</span> <span class="s2">&quot;SELECT sqlcipher_export(&#39;encrypted&#39;);&quot;</span><span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="sr">//</span> <span class="err">执行分离</span>
+</span><span class='line'>  <span class="n">sqlite3_exec</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">,</span> <span class="s2">&quot;DETACH DATABASE encrypted;&quot;</span><span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">,</span> <span class="no">NULL</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="no">NSLog</span> <span class="p">(</span><span class="err">@</span><span class="s2">&quot;End database copying at %@&quot;</span><span class="p">,</span><span class="o">[</span><span class="no">NSDate</span> <span class="n">date</span><span class="o">]</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">sqlite3_close</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">sqlite3_close</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">);</span>
+</span><span class='line'>    <span class="no">NSAssert1</span><span class="p">(</span><span class="no">NO</span><span class="p">,</span> <span class="err">@</span><span class="s2">&quot;Failed to open database with message &#39;%s&#39;.&quot;</span><span class="p">,</span> <span class="n">sqlite3_errmsg</span><span class="p">(</span><span class="n">convert_DB</span><span class="p">));</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h4>为加密后的sqlite执行解密(其实步骤与加密一样，只要把key设置为空就实现了不加密)</h4>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ATTACH DATABASE 'encrypted.db' as encrypted KEY ''; //encrypted.db是要导出的新的数据库
-</span><span class='line'>SELECT sqlcipher_export('encrypted');
-</span><span class='line'>DETACH DATABASE encrypted;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ATTACH</span> <span class="no">DATABASE</span> <span class="s1">&#39;encrypted.db&#39;</span> <span class="n">as</span> <span class="n">encrypted</span> <span class="no">KEY</span> <span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="sr">//en</span><span class="n">crypted</span><span class="o">.</span><span class="n">db</span><span class="err">是要导出的新的数据库</span>
+</span><span class='line'><span class="no">SELECT</span> <span class="n">sqlcipher_export</span><span class="p">(</span><span class="s1">&#39;encrypted&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="no">DETACH</span> <span class="no">DATABASE</span> <span class="n">encrypted</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>参考</h2>
